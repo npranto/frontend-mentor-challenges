@@ -2,9 +2,9 @@
 A compilation of Frontend Mentor coding challenges to improve building real world user interfaces and applications 
 
 ## Challenges
-- Single price grid component: 
-  - [**Demo**](#/) (*coming soon*)
-  - [**Code**](https://github.com/npranto/single-price-grid-component)
-- Four card feature section: 
-  - [**Demo**](#/) (*coming soon*)
-  - [**Code**](https://github.com/npranto/single-price-grid-component)
+- [**Single price grid component**](https://www.frontendmentor.io/challenges/single-price-grid-component-5ce41129d0ff452fec5abbbc)
+  - [Demo](#/) (*coming soon*)
+  - [Code](https://github.com/npranto/single-price-grid-component)
+- [**Four card feature section**](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK) 
+  - [Demo](#/) (*coming soon*)
+  - [Code](https://github.com/npranto/single-price-grid-component)
