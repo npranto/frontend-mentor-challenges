@@ -1,0 +1,6 @@
+[submodule "single-price-grid-component"]
+	path = single-price-grid-component
+	url = https://github.com/npranto/single-price-grid-component.git
+[submodule "four-card-feature-section"]
+	path = four-card-feature-section
+	url = https://github.com/npranto/four-card-feature-section.git
