@@ -6,5 +6,5 @@ A compilation of Frontend Mentor coding challenges to improve building real worl
   - [Demo](https://npranto-single-price-grid-component.netlify.app)
   - [Code](https://github.com/npranto/single-price-grid-component)
 - [**Four card feature section**](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK) 
-  - [Demo](#/) (*coming soon*)
-  - [Code](https://github.com/npranto/single-price-grid-component)
+  - [Demo](https://npranto-four-card-feature-section.netlify.app/)
+  - [Code](https://github.com/npranto/four-card-feature-section)
