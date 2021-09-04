@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- font (Poppins) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Four card feature section</title>
+
+  <!-- Feel free to remove these styles or customize in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    /* variables */
+    :root {
+      /* typography */
+      --font-size-header: 1.25rem;
+      --font-size-subheader: 1rem;
+      --font-size-paragraph-xxs: 0.6875rem;
+      --font-size-paragraph-xs: 0.75rem;
+      --font-size-paragraph-sm: 0.875rem;
+      --font-size-paragraph-md: 1rem;
+      --font-weight-200: 200;
+      /* --font-weight-400: 400; */
+      --font-weight-600: 600;
+      --font-family-poppin: 'Poppins', sans-serif;
+      /* spacing */
+      --padding-sm: 1em;
+      --padding-md: 2.5em;
+      --padding-lg: 5em;
+      --margin-xs: 0.5em;
+      --margin-sm: 1em;
+      --margin-md: 2.5em;
+      --margin-lg: 3em;
+      --margin-xl: 4em;
+      /* shadows */
+      --box-shadow-default: 8px 10px 20px 0 rgba(46, 61, 73, 0.15);
+      /* colors */
+      --red: hsl(0, 78%, 62%);
+      --cyan: hsl(180, 62%, 55%);
+      --orange: hsl(34, 97%, 64%);
+      --blue: hsl(212, 86%, 64%);
+      --very-dark-blue: hsl(234, 12%, 34%);
+      --grayish-blue: hsl(229, 6%, 66%);
+      --very-light-gray: hsl(0, 0%, 98%);
+      --light-gray: #fafafa;
+      --white: #ffffff;
+    }
+
+    /* utilities */
+    /* text-colors */
+    .text-very-dark-blue {
+      color: var(--very-dark-blue);
+    }
+    .text-grayish-blue {
+      color: var(--grayish-blue);
+    }
+    /* text-weight */
+    .text-weight-200 {
+      font-weight: 200;
+    }
+    .text-weight-600 {
+      font-weight: 600;
+    }
+    /* border-colors */
+    .border-red {
+      border-color: var(--red);
+    }
+    .border-orange {
+      border-color: var(--orange);
+    }
+    .border-blue {
+      border-color: var(--blue);
+    }
+    .border-cyon {
+      border-color: var(--cyan);
+    }
+    /* common */
+    .text-center {
+      text-align: center;
+    }
+
+    /* CSS reset */
+    body, main, section div, h1, h2, h3, p {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-size: 10px;
+      font-family: var(--font-family-poppin);
+      font-weight: var(--font-weight-200);
+    }
+    body * {
+      box-sizing: border-box;
+    }
+
+    /* custom CSS */
+    main {
+      background-color: --var(--very-light-gray);
+      padding: var(--padding-lg) var(--padding-md) 0 var(--padding-md);
+    }
+
+    .header {
+      font-size: var(--font-size-header);
+      margin-bottom: var(--margin-sm);
+    }
+
+    .intro {
+      font-size: var(--font-size-paragraph-xs);
+      margin-bottom: var(--margin-xl);
+    }
+
+    .cards {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .block {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .card {
+      background-color: var(--white);
+      padding: var(--padding-md);
+      border-top-width: 3px;
+      border-top-style: solid;
+      margin-bottom: var(--margin-md);
+      border-radius: 5px;
+      box-shadow: var(--box-shadow-default);
+    }
+    .card h3 {
+      font-size: var(--font-size-subheader);
+    }
+    .card p {
+      font-size: var(--font-size-paragraph-xxs);
+    }
+    .card .icon {
+      text-align: right;
+      margin-top: var(--margin-lg);
+    }
+    .card .icon img {
+      width: 50px;
+      height: auto;
+      text-align: right;
+    }
+
+
+    /* large  */
+    @media screen and (min-width: 500px) {
+      :root {
+        --font-size-header: 1.75rem;
+      }
+
+      body {
+        font-size: 15px;
+      }
+      
+      .header {
+        font-size: var(--font-size-header);
+        margin-bottom: var(--margin-xs);
+      }
+
+      .intro {
+        font-size: var(--font-size-paragraph-sm);
+        margin-bottom: var(--margin-lg);
+        padding: 0 30%;
+      }
+
+      .cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 var(--margin-sm);
+        max-width: 300px;
+        flex: 1 1 0;
+      }
+
+      .card {
+        padding: var(--padding-sm);
+        margin: var(--margin-sm) 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1 class="header text-grayish-blue text-weight-200 text-center">
+      Reliable, efficient delivery
+      <br />
+      <span class="text-very-dark-blue text-weight-600"> Powered by Technology</span>
+    </h1>
+
+    <p class="intro text-grayish-blue text-center">Our Artificial Intelligence powered tools use millions of project data points 
+    to ensure that your project is successful</p>
+    
+    <section class="cards">
+      <div class="block left">
+        <div class="card border-cyon supervisor">
+          <h3 class="text-very-dark-blue text-weight-600">Supervisor</h3>
+          <p class="text-grayish-blue">Monitors activity to identify project roadblocks</p>
+          <div class="icon">
+            <img src="./images/icon-supervisor.svg" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="block mid">
+        <div class="card border-red team-builder">
+          <h3 class="text-very-dark-blue text-weight-600">Team Builder</h3>
+          <p class="text-grayish-blue">Scans our talent network to create the optimal team for your project</p>
+          <div class="icon">
+            <img src="./images/icon-team-builder.svg" alt="">
+          </div>
+        </div>
+        <div class="card border-orange karma">
+          <h3 class="text-very-dark-blue text-weight-600">Karma</h3>
+          <p class="text-grayish-blue">Regularly evaluates our talent to ensure quality</p>
+          <div class="icon">
+            <img src="./images/icon-karma.svg" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="block right">
+        <div class="card border-blue calculator">
+          <h3 class="text-very-dark-blue text-weight-600">Calculator</h3>
+          <p class="text-grayish-blue">Uses data from past projects to provide better delivery estimates</p>
+          <div class="icon">
+            <img src="./images/icon-calculator.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/npranto">Nazmuz Pranto</a>.
+    </p>
+  </footer>
+</body>
+</html>
