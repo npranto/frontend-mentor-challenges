@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;700&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Order summary card</title>
 
@@ -15,23 +19,195 @@
   </style>
 </head>
 <body>
+  <style>
+    :root {
+      /* colors */
+      --pale-blue: hsl(225, 100%, 94%);
+      --bright-blue: hsl(245, 75%, 52%);
+      --very-pale-blue: hsl(225, 100%, 98%);
+      --desaturated-blue: hsl(224, 23%, 55%);
+      --dark-blue: hsl(223, 47%, 23%);
+      /* typography */
+      --font-size-default: 16px;
+      --font-family-default: 'Red Hat Display', sans-serif;
+      --font-weight-500: 500;
+      --font-weight-700: 700;
+      --font-weight-900: 900;
+    }
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    html {
+      font-size: var(--font-size-default);
+    }
+    body {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-family-default);
+    }
+    body * {
+      font-family: var(--font-family-default);
+    }
+    button {
+      border: none;
+      outline: none;
+      background: none;
+      cursor: pointer;
+    }
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
+    }
+    .order-summary {
+      max-width: 400px;
+      width: 100%;
+      border-radius: 15px;
+      background-image: url('./images/illustration-hero.svg');
+      background-repeat: no-repeat;
+      padding-top: 220px;
+      overflow: hidden;
+      box-shadow: var(--pale-blue) 0px 7px 29px 0px;
+    }
+    .content {
+      padding: 2em;
+      background-color: white;
+    }
+    .title {
+      font-size: 1.75rem;
+      text-align: center;
+      margin-bottom: 0.5em;
+      color: var(--dark-blue);
+    }
+    .description {
+      font-size: 1rem;
+      text-align: center;
+      color: var(--desaturated-blue);
+      margin-bottom: 1em;
+      padding: 0 1em;
+      line-height: 1.5;
+    }
+    .plan {
+      display: flex;
+      align-items: center;
+      padding: 1.25em;
+      background-color: var(--very-pale-blue);
+      border-radius: 10px;
+      margin-bottom: 1.75em;
+    }
+    .logo {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .logo img {
+      max-width: 100%;
+      height: auto;
+      overflow: hidden;
+    }
+    .details {
+      flex-grow: 1;
+      margin: 0 1em;
+    }
+    .details .name {
+      font-size: 1rem;
+      margin-bottom: 0.25em;
+      font-weight: 900;
+    }
+    .details .price {
+      font-size: 1rem;
+      color: var(--desaturated-blue);
+      font-weight: var(--font-weight-500);
+    }
+    .actions .change-plan-btn {
+      text-decoration: underline;
+      color: var(--bright-blue);
+      font-weight: bold;
+    }
+    .actions .change-plan-btn:focus,
+    .actions .change-plan-btn:active {
+      color: var(--desaturated-blue);
+      text-decoration: none;
+    }
+    .next-steps {
+      display: flex;
+      flex-direction: column;
+    }
+    .next-steps .proceed-to-payment-btn {
+      background-color: var(--bright-blue);
+      color: white;
+      font-size: 1rem;
+      font-weight: bolder;
+      text-align: center;
+      border-radius: 10px;
+      padding: 1em;
+      margin-bottom: 0.5em;
+      transition: 300ms all ease-in-out;
+    }
+    .next-steps .proceed-to-payment-btn:hover,
+    .next-steps .proceed-to-payment-btn:focus,
+    .next-steps .proceed-to-payment-btn:active {
+      box-shadow: var(--pale-blue) 0px 15px 40px 15px;
+    }
+    .next-steps .cancel-order-btn {
+      background-color: transparent;
+      color: var(--desaturated-blue);
+      font-size: 1rem;
+      font-weight: bolder;
+      text-align: center;
+      padding: 1em;
+    }
+  </style>
 
-  Order Summary
+  <main>
+    <section class="order-summary">
+      <div class="content">
+        <h2 class="title">Order Summary</h2>
+        
+        <p class="description">
+          You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!
+        </p>
 
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
+        <div class="plan">
+          <div class="logo">
+            <img src="./images/icon-music.svg" alt="Plan Logo">
+          </div>
+          <div class="details">
+            <h3 class="name">Annual Plan</h3>
+            <p class="price">$59.99/year</p>
+          </div>
+          <div class="actions">
+            <a href="#" class="change-plan-btn">Change</a>
+          </div>
+        </div>
 
-  Annual Plan
-  $59.99/year
+        <div class="next-steps">
+          <button type="button" class="proceed-to-payment-btn">
+            Proceed to Payment
+          </button>
+          <button type="button" class="cancel-order-btn">
+            Cancel Order
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  Change
-
-  Proceed to Payment
-  Cancel Order
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </footer>
 </body>
 </html>
